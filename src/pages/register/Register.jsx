@@ -35,10 +35,11 @@ const Register = () => {
     // if (password !== password2) {
     //   alert("Passwords do not match");
     // } else {
+      const userName=user.nickname
+      setEmail(user.email)
       try {
         dispatch(
           register(
-            password,
             firstName,
             lastName,
             phone,
@@ -47,7 +48,8 @@ const Register = () => {
             street,
             city,
             state,
-            pincode
+            pincode,
+            userName
           )
         );
         Swal.fire({
@@ -56,7 +58,7 @@ const Register = () => {
           icon: "success",
           confirmButtonText: "Proceed to Login",
         });
-        history.push("/");
+        history.push("/homepage");
       } catch (error) {
         Swal.fire({
           title: "Error!",
@@ -107,7 +109,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="register-inputfield">
+            {/* <div className="register-inputfield">
               <label className="register-phone">E-Mail</label>
               <input
                 type="email"
@@ -116,7 +118,7 @@ const Register = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-            </div>
+            </div> */}
             <div className="register-inputfield">
               <label className="register-phone">Phone</label>
               <input

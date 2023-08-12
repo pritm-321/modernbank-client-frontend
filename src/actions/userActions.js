@@ -23,7 +23,7 @@ export const login = (uid, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/customer/loginCustomer`,
+      `https://modernbank-backend.onrender.com/api/v1/customer/loginCustomer`,
       { uid, password } , config
     );
     console.log(data);
@@ -67,7 +67,7 @@ export const logout = () => (dispatch) => {
 
 export const register = (
   
-  userPassword,
+  userName,
   firstName,
   lastName,
   phone,
@@ -80,7 +80,7 @@ export const register = (
 ) => async (dispatch) => {
   let postdata = {
    
-    password: userPassword,
+    username: userName,
     firstName: firstName,
     lastName: lastName,
     phone: phone,
@@ -104,7 +104,7 @@ export const register = (
     };
 
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/customer/registerCustomer`, postdata,config
+      `https://modernbank-backend.onrender.com/api/v1/customer/registerCustomer`, postdata,config
     );
     console.log(data);
     dispatch({
