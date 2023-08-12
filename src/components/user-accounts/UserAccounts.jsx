@@ -5,6 +5,7 @@ import DonotHaveAnyAccount from "../../pages/DonotHaveAnyAccount/DonotHaveAnyAcc
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch, useSelector } from "react-redux";
 import { listUserAccounts } from "../../actions/userAccountActions";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const UserAccounts = () => {
   const history = useHistory();
@@ -19,11 +20,16 @@ const UserAccounts = () => {
 
   const accountCreate = useSelector((state) => state.userAccountCreate);
   const { success: acCreateSuccess } = accountCreate;
+  const { user, isAuthenticated, isLoading,logout } = useAuth0();
 
   useEffect(() => {
     dispatch(listUserAccounts());
-    if (!userInfo) {
-      history.push("/");
+    // if (!userInfo) {
+    //   history.push("/");
+    // }
+    if(!isAuthenticated){
+      // console.log(user);
+      history.push('/homepage')
     }
   }, [dispatch, history, userInfo, acCreateSuccess]);
 

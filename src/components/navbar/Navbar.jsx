@@ -6,17 +6,20 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { logout } from '../../actions/userActions';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const TopNavbar = () => {
   const history= useHistory()
   const dispatch= useDispatch()
+  const { user, isAuthenticated, isLoading,logout } = useAuth0();
   
 
   const logoutHandler=()=>{
-    dispatch(logout())
+   
     history.push('/')
 
   }
+  
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -31,7 +34,7 @@ const TopNavbar = () => {
               <NavDropdown.Item href="#action/3.2">
                 View Accounts
               </NavDropdown.Item>
-              <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link

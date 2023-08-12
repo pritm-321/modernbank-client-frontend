@@ -27,8 +27,7 @@ const Hero = () => {
     <section id="hero">
       <div className="container">
         <div className="greetings mt-5">
-          {console.log(userInfo)}
-          <h3>{`Welcome ${userInfo.findUser.firstName},`}</h3>
+          <h3>{`Welcome ${userInfo?.findUser.firstName},`}</h3>
         </div>
         <div className="hero-slider mt-4">
           <Swiper

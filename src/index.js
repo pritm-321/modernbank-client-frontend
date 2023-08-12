@@ -7,12 +7,21 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <Auth0Provider
+    domain="dev-qd4voxc87vjudvct.us.auth0.com"
+    clientId="ajrIRyW4SPo1TJ7N6Gd3d2y4O2rkSDW5"
+    
+      redirectUri= {window.location.origin}
+    
+  >
  <Provider store={store}>
     <App />
     </Provider>
+    </Auth0Provider>
   
 );
 
