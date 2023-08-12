@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body-ofwithdraw{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ebf5fb;
+    padding: 30px;
+}
+
+.container-ofwithdraw{
+    max-width: 750px;
+    width: 100%;
+    background: #f6f6f6;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 5vw;
+    margin: 5vw 20vw;
+}
+
+.title-ofwithdraw{
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+#withdrawAmount{
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+#withdrawAmtbutton {
+    text-align: center;
+    display: flex;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    background: #5dade2;
+    color: #d6eaf8;
+    border-radius: 5px;
+    border: none;
+    margin: auto;
+}
+#withdrawAmtbutton:hover {
+    background-color: #d6eaf8;
+    color: black;
+    border: 2px solid #1b4f72;
+}
+
+#withdrawCancelbutton{
+    text-align: center;
+    display: flex;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #3579a6;
+    border-radius: 5px;
+    border-color: #4b93c3;
+    margin: auto;
+}
+
+#withdrawCancelbutton:hover {
+    background-color: #d6eaf8;
+    color: black;
+    border: 2px solid black;
+}
+
+#withdraw-buttons{
+    display: flex;
+}

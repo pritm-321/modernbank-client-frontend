@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.profile-container{
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: rgb(220, 220, 228);
+}
+
+.profile-box{
+    flex: 30%;
+    display: table;
+    font-size: 20px;
+    align-items: center;
+    background-color: #22376b;
+    color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.profile-box img{
+    border-radius: 50%;
+    border: 2px solid #fff;
+    height: 250px;
+    width: 250px;
+    background-color: antiquewhite;
+}
+.profile-info{
+    display: flex;
+}
+
+.profile-nameofuser{
+    margin: 40px;
+}
+.profile-name{
+    font-size: 30px;
+}
+.profile-username{
+    font-size: 20px;
+}
+.profile-userinfo{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.profile-phone,.profile-aadhar,.profile-address{
+    padding: 10px 20px;
+    font-size: 17px;
+    margin: 50px;
+}
+
+i{
+    position: absolute;
+    font-size: 20px;
+    margin: 7px;
+}
+
+.profile-accounts{
+    margin-left: 20px;
+    flex: 50%;
+    display: table;
+    padding: 30px 30px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1068px) {
+    .profile-container{
+        display: table;
+    }
+    .profile-box{
+        width: 100%;
+    }
+    .profile-accounts{
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+    }
+}

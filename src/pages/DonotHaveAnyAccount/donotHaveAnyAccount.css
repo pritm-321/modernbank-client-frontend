@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.messageToUser {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.createbtn {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  background: #5dade2;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px;
+}
+.createbtn:hover {
+  background-color: #d6eaf8;
+  color: black;
+  border: 0.5px solid #1b4f72;
+}
+.createAccimg {
+  /* height: 250px;
+  width: 250px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  border-radius: 50%;
+}

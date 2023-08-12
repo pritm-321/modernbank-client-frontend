@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.register-wrapper {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ebf5fb;
+  padding: 30px;
+}
+
+.register-form {
+  max-width: 950px;
+  width: 100%;
+  background: #f6f6f6;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 2vw 5vw 5vw;
+  margin: 2vw auto;
+}
+
+.register-bankname {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(57, 66, 150);
+  /* font-family:'Bitter', serif; */
+  text-align: center;
+}
+
+.register-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 30px 50px 10px;
+}
+
+.register-name,
+.register-phone,
+.register-email,
+.register-aadhar,
+.register-stname,
+.register-cityname,
+.register-userid,
+.register-pin,
+.register-state,
+.register-password,
+.register-retypepassword {
+  width: 200px;
+  color: #211f1f;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.register-fname,
+.register-lname,
+.register-phoneinput,
+.register-emailinput,
+.register-aadharinput,
+.register-stnameinput,
+.register-citynameinput,
+.register-pininput,
+.register-stateinput,
+.register-usernameinput,
+.register-passwordinput,
+.register-retypepasswordinput {
+  outline: none;
+  font-size: 15px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 10px;
+  margin-left: 50px;
+  transition: all 0.3s ease;
+}
+
+.register-phoneinput::-webkit-inner-spin-button,
+.register-phoneinput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.register-aadharinput::-webkit-inner-spin-button,
+.register-aadharinput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.register-pininput::-webkit-inner-spin-button,
+.register-pininput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.register-inputfieldsubmit {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.register-submit {
+  border: none;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: bolder;
+  background: #5dade2;
+  color: #fff;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.register-submit:hover {
+  background-color: #d6eaf8;
+  color: black;
+  border: 2px solid #1b4f72;
+}

@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper1 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.loginx-container {
+  display: flex;
+}
+
+.login-container {
+  flex: 3;
+  margin: 30px;
+  padding-right: 30px;
+  align-items: center;
+  font-size: 14px;
+}
+img {
+  width: 150%;
+  margin-right: 0;
+}
+.login-container {
+  margin: 20px;
+  height: 250px;
+  width: 550px;
+}
+
+.form1 {
+  max-width: 750px;
+  min-width: 450px;
+  width: 100%;
+  background: #ebf5fb;
+  /* padding: 40px 30px; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 5vw;
+  flex: 2;
+}
+
+.title1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.login-userid,
+.login-password {
+  width: 200px;
+  color: #211f1f;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.input {
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login-reg {
+  display: flex;
+  margin: 30px 0px 30px;
+  font-size: 15px;
+}
+.login-reg button {
+  margin: auto;
+  margin-bottom: 10%;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  background: #fff;
+  color: black;
+  border-radius: 5px;
+}
+.login-reg button:hover {
+  background-color: #5dade2;
+  color: #f6f6f6;
+  border: 2px solid #1b4f72;
+}
+
+.wrapper1 .form1 .inputfield .btn {
+  margin: auto;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  background: #5dade2;
+  color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.wrapper1 .form1 .inputfield .btn:hover {
+  background-color: #d6eaf8;
+  color: black;
+  border: 2px solid #1b4f72;
+}
+
+.wrapper1 .form1 .inputfield:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 420px) {
+  .wrapper1 .form1 .inputfield {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper1 .form1 .inputfield label {
+    margin-bottom: 5px;
+  }
+  .wrapper1 .form1 .inputfield.terms {
+    flex-direction: row;
+  }
+}

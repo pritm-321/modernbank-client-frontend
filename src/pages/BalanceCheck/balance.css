@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.balance-page{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ebf5fb;
+    padding: 30px;
+}
+
+.bodyofbalancecheck{
+    background: #f6f6f6;
+    border: 2px solid lightgray;
+    border-radius: 20px; 
+    margin: 5vw 20vw;
+}
+
+.balance-check-center{
+    text-align: center;
+    margin: auto;
+    padding: 6vw 15vw;
+}
+
+.accountbalance{
+    border-radius: 6px;
+    padding: 40px;
+    background: #c4e3f6;
+    color: rgb(2, 2, 2);
+    font-weight: bold;
+}
+
+.returnbacktohomebutton {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    background: #5dade2;
+    color: #d6eaf8;
+    border-radius: 5px;
+    border: none;
+
+}
+.returnbacktohomebutton:hover {
+    background-color: #d6eaf8;
+    color: black;
+    border: 2px solid #1b4f72;
+}
+a:link{
+    text-decoration: none;
+}
