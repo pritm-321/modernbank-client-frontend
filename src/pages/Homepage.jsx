@@ -10,6 +10,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 const Button = styled.div`
 text-align: center;
 margin-top: 40px;
+margin-bottom: 40px;
 border-radius: 15px;
 `
 

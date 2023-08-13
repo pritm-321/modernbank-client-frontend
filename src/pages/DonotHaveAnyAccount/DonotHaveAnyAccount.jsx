@@ -8,9 +8,9 @@ function DonotHaveAnyAccount() {
       <h1 className="messageToUser">You Don't Have any account.</h1>
       <img src={IMG} alt="" className="createAccimg" />
 
-      <button type="submit" className="createbtn">
+      {/* <button type="submit" className="createbtn">
         Creat Account
-      </button>
+      </button> */}
     </div>
   );
 }
