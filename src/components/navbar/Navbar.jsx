@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { logout } from '../../actions/userActions';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Avatar } from '@mui/material';
 
 const TopNavbar = () => {
   const history= useHistory()
@@ -30,7 +31,8 @@ const TopNavbar = () => {
             {/* <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link> */}
             <NavDropdown title="Profile" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/profile">View Profile</NavDropdown.Item>
+              <NavDropdown.Item href="/profile">
+              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 View Accounts
               </NavDropdown.Item>

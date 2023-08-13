@@ -21,7 +21,7 @@ const Homepage = () => {
   const { user, isAuthenticated, isLoading,logout } = useAuth0();
   useEffect(() => {
     if(!isAuthenticated){
-      console.log(user);
+      // console.log(user);
       history.push('/')
     }
 

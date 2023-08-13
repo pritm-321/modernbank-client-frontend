@@ -222,8 +222,8 @@ const Actions = () => {
                 </svg>
                 <i class="bi bi-trash-fill"></i>
               </div>
-              <h4>Close/Freeze Account</h4>
-              <p>Freeze this current account when its no longer in use.</p>
+              <h4>Close Account</h4>
+              <p>Close this current account when its no longer in use.</p>
             </div>
             </button>
           </div>

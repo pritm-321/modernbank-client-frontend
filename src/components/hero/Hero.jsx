@@ -31,7 +31,7 @@ const Hero = () => {
           "Content-Type": "application/json",
         },
       };
-      const userName = user.nickname;
+      const userName = user?.nickname;
       const { data } = await axios.post(
         `https://modernbank-backend.onrender.com/api/v1/customer/getCustomerByUid`,
         { uid: userName },
@@ -45,7 +45,10 @@ const Hero = () => {
     <section id="hero">
       <div className="container">
         <div className="greetings mt-5">
-          <h3>{`Welcome ${name},`}</h3>
+          {
+            name?<h3>{`Welcome ${name},`}</h3>:null
+          }
+          {/* <h3>{`Welcome ${name},`}</h3> */}
         </div>
         <div className="hero-slider mt-4">
           <Swiper

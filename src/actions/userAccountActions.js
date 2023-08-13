@@ -33,7 +33,7 @@ export const listUserAccounts = (id) => async (dispatch, getState) => {
       { uid:id },
       config
     );
-    console.log(data);
+    // console.log(data);
 
     dispatch({
       type: USER_ACCOUNTS_SUCCESS,
