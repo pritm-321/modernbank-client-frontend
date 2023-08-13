@@ -191,7 +191,7 @@ const Actions = () => {
                   confirmButtonText: 'Yes, Freeze it!'
                 }).then(async(result) => {
                   if (result.isConfirmed) {
-                    const {data} = await axios.post(`https://banking-backend-zynj.onrender.com/api/v1/admin/freezeAccountByAid`,
+                    const {data} = await axios.post(`https://modernbank-backend.onrender.com/api/v1/admin/freezeAccountByAid`,
                     {aid: id})
 
                     Swal.fire(

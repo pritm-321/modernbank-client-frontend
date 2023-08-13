@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useParams,useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { createUserAccount } from '../../actions/userAccountActions';
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 const CreateAccount = () => {
@@ -13,7 +14,7 @@ const CreateAccount = () => {
     const [accountType, setAccountType] = useState("");
     const[bal, setBal] = useState("");
     const[nominee, setNominee] = useState("");
-
+    const { user, isAuthenticated, isLoading,logout } = useAuth0();
     const dispatch = useDispatch();
     const accountCreate= useSelector((state)=>state.userAccountCreate);
     const {loading,error,success}=accountCreate;
@@ -23,9 +24,7 @@ const CreateAccount = () => {
 
     const submitHandler=(e)=>{
         e.preventDefault();
-        dispatch(createUserAccount(userInfo.findUser.uid,accountType,bal,nominee));
-        
-
+        dispatch(createUserAccount(user.nickname,accountType,bal,nominee));
         history.push(`/homepage`)
     }
 

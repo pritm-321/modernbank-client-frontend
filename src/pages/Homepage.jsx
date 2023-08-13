@@ -23,6 +23,7 @@ const Homepage = () => {
       console.log(user);
       history.push('/')
     }
+
   }, [])
   return (
     <>
@@ -32,7 +33,7 @@ const Homepage = () => {
     <UserAccounts/>
 
     <Button >
-        {/* <button className="button1" type="submit" onClick={()=> history.push(`/createaccount/${id}`)} >Create New Account</button> */}
+        <button className="button1" type="submit" onClick={()=> history.push(`/createaccount/${user.nickname}`)} >Create New Account</button>
       </Button>
     
     <Assistant/>

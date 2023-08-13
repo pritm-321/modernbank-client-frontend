@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Register = () => {
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -36,10 +36,13 @@ const Register = () => {
     //   alert("Passwords do not match");
     // } else {
       const userName=user.nickname
-      setEmail(user.email)
+      console.log(user)
+      const email=user.email
+      console.log(email)
       try {
         dispatch(
           register(
+            userName,
             firstName,
             lastName,
             phone,
@@ -49,7 +52,7 @@ const Register = () => {
             city,
             state,
             pincode,
-            userName
+            
           )
         );
         Swal.fire({

@@ -7,18 +7,18 @@ export const userAccountPassbook= (accountNumber) => async (dispatch, getState) 
       type: PASSBOOK_FETCH_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    //const {
+//     userLogin: { userInfo },
+//    } = getState();
 
     const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        //Authorization: `Bearer ${userInfo.token}`,
       },
     };
 
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/admin/getAllTransactionByAid`,
+      `https://modernbank-backend.onrender.com/api/v1/admin/getAllTransactionByAid`,
       {
         "aid" : accountNumber
       }

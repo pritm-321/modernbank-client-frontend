@@ -21,18 +21,18 @@ export const getAccountBalance = (id) => async (dispatch, getState) => {
       type: BALANCE_FETCH_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    //const {
+//     userLogin: { userInfo },
+//    } = getState();
 
     const config = {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${userInfo.token}`,
+        //Authorization: `Bearer ${userInfo.token}`,
       },
     };
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/admin/getBalanceByAid`,
+      `https://modernbank-backend.onrender.com/api/v1/admin/getBalanceByAid`,
       { aid: id },
       config
     );
@@ -61,18 +61,18 @@ export const moneyTransfer = (id, account, amount) => async (
       type: MONEY_TRANSFER_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    //const {
+//     userLogin: { userInfo },
+//    } = getState();
 
     const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        //Authorization: `Bearer ${userInfo.token}`,
       },
     };
     console.log(config);
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/customer/transferToAccount`,
+      `https://modernbank-backend.onrender.com/api/v1/customer/transferToAccount`,
       {
         senderaid: id,
         receiveraid: account,
@@ -110,17 +110,17 @@ export const moneyWithdraw = (id, amount) => async (dispatch, getState) => {
       type: MONEY_WITHDRAW_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    //const {
+//     userLogin: { userInfo },
+//    } = getState();
 
     const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        //Authorization: `Bearer ${userInfo.token}`,
       },
     };
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/customer/withdraw`,
+      `https://modernbank-backend.onrender.com/api/v1/customer/withdraw`,
       {
         aid: id,
         amount: amount,
@@ -159,17 +159,17 @@ export const moneyDepositACtion = (id, amount) => async (
       type: MONEY_DEPOSIT_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    //const {
+//     userLogin: { userInfo },
+//    } = getState();
 
     const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        //Authorization: `Bearer ${userInfo.token}`,
       },
     };
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/customer/deposit`,
+      `https://modernbank-backend.onrender.com/api/v1/customer/deposit`,
       {
         aid: id,
         amount: amount,

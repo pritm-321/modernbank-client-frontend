@@ -9,29 +9,31 @@ import {
 } from "../constants/userAccountsConstants";
 
 import Swal from "sweetalert2";
+import { useAuth0 } from "@auth0/auth0-react";
 
-export const listUserAccounts = () => async (dispatch, getState) => {
+export const listUserAccounts = (id) => async (dispatch, getState) => {
   try {
     dispatch({
       type: USER_ACCOUNTS_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    //const {
+//     userLogin: { userInfo },
+//    } = getState();
 
     const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        //Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const uid = userInfo.findUser.uid;
+
+    
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/admin/getAllAccountsByUid`,
-      { uid },
+      `https://modernbank-backend.onrender.com/api/v1/admin/getAllAccountsByUid`,
+      { uid:id },
       config
     );
-    // console.log(data);
+    console.log(data);
 
     dispatch({
       type: USER_ACCOUNTS_SUCCESS,
@@ -69,14 +71,14 @@ export const createUserAccount = (id, type, bal, nominee) => async (
       type: USER_ACCOUNT_CREATE_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+    // const {
+    //   userLogin: { userInfo },
+    // } = getState();
 
     const config = {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${userInfo.token}`,
+        // //Authorization: `Bearer ${userInfo.token}`,
       },
     };
     const acdetails = {
@@ -85,8 +87,9 @@ export const createUserAccount = (id, type, bal, nominee) => async (
       balance: bal,
       nominee: nominee,
     };
+    console.log(acdetails);
     const { data } = await axios.post(
-      `https://banking-backend-zynj.onrender.com/api/v1/customer/registerAccount`,
+      `https://modernbank-backend.onrender.com/api/v1/customer/registerAccount`,
       acdetails,
       config
     );
@@ -114,7 +117,7 @@ export const createUserAccount = (id, type, bal, nominee) => async (
     Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Something went wrong!",
+        text: error.message,
         });
   }
 };

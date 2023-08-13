@@ -90,6 +90,7 @@ export const register = (
       city: city,
       state: state,
       pinCode: pincode,
+      middleName:""
    
   };
   console.log(postdata);
@@ -102,7 +103,7 @@ export const register = (
         "Content-Type": "application/json",
       },
     };
-
+    console.log(postdata)
     const { data } = await axios.post(
       `https://modernbank-backend.onrender.com/api/v1/customer/registerCustomer`, postdata,config
     );

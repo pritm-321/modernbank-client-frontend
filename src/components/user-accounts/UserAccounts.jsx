@@ -15,15 +15,15 @@ const UserAccounts = () => {
   const userAccounts = useSelector((state) => state.userAccounts);
   const { loading, error, accounts } = userAccounts;
 
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
+  // const userLogin = useSelector((state) => state.userLogin);
+  // const { userInfo } = userLogin;
 
   const accountCreate = useSelector((state) => state.userAccountCreate);
   const { success: acCreateSuccess } = accountCreate;
   const { user, isAuthenticated, isLoading,logout } = useAuth0();
 
   useEffect(() => {
-    dispatch(listUserAccounts());
+    dispatch(listUserAccounts(user.nickname));
     // if (!userInfo) {
     //   history.push("/");
     // }
@@ -31,7 +31,7 @@ const UserAccounts = () => {
       // console.log(user);
       history.push('/homepage')
     }
-  }, [dispatch, history, userInfo, acCreateSuccess]);
+  }, [dispatch, history,  acCreateSuccess]);
 
   return (
     <div>
