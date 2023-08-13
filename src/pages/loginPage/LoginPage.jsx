@@ -16,18 +16,22 @@ function LoginPage() {
 
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
-  const { loading, error, userInfo } = userLogin;
+  const { error, userInfo } = userLogin;
   const { user, isAuthenticated, isLoading, logout } = useAuth0();
+  const [loading,setLoading]=useState('')
 
   const history = useHistory();
   useEffect(() => {
     async function checkUser() {
+      console.log("login")
+      setLoading(true)
       const config = {
         headers: {
           "Content-Type": "application/json",
         },
       };
       const userName = user.nickname;
+      
       const { data } = await axios.post(
         `https://modernbank-backend.onrender.com/api/v1/customer/getCustomerByUid`,
         { uid: userName },
@@ -35,8 +39,10 @@ function LoginPage() {
       );
 
       if (data.message === "No such customer exist with this uid") {
+        setLoading(false)
         history.push("/register");
       } else {
+        setLoading(false)
         localStorage.setItem("user", JSON.stringify(data));
         history.push("/homepage");
       }
@@ -58,7 +64,7 @@ function LoginPage() {
 
   return (
     <div>
-      {isLoading ? (
+      {isLoading || loading ? (
         <Loading loadtext="Processing Your Request...." />
       ) : (
         <>
