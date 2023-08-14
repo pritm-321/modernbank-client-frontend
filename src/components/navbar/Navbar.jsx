@@ -32,15 +32,16 @@ const TopNavbar = () => {
             <Nav.Link href="#link">Link</Nav.Link> */}
             <NavDropdown title="Profile" id="basic-nav-dropdown">
               <NavDropdown.Item href="/profile">
+                View Profile
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 View Accounts
               </NavDropdown.Item>
               <NavDropdown.Item onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</NavDropdown.Item>
-              <NavDropdown.Divider />
+              {/* <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
           
         </Navbar.Collapse>
